@@ -1,0 +1,187 @@
+Nextjs
+supabase
+
+Landing - about - contact - term 
+login - register - complete - dashboard
+
+dashboard - setting
+profile
+social link
+custom link
+analytic
+
+domain.com/[username]
+
+role : admin, content creator, brand
+
+system requied
+secure {handle from hacker}
+sanitasi
+seo friendly {setiap public page}
+rate limit
+tidak hardcode {app name, link dll setup .env}
+
+flow
+cta landing - register / login - complete - dashboard
+
+====
+form register
+
+email
+pass
+copass
+term {tidak harus centang} handle dengan kata "dengan mendaftar maka setuju ..."
+tombol daftar
+
+jika berhasil, tampilkan
+akun berhasil dibuat, mohon verifikasi email
+{email}
+tombol login {auro redirect 5 detik}
+====
+form login
+email
+pass
+tombol login
+
+auto check {supabase auth} jika blm verifikasi maka tampilkan notifikasi "Email belum dikonfirmasi"
+jika sudah, maka login
+
+cek sesi, apakah sudah melengkapi profil
+
+jika belum maka direct ke /complete
+====
+
+form lengkapi profile
+tipe akun {role} content creator [cc] / brand 
+username {unik, cek database}
+nama lengkap
+
+Jika pilih role [cc]
+tampilkan niche {dropdown dengan search, maksimal pilih 3 minimal 1}
+
+jika piluh role [brand]
+tampilkan kategori bisnis {dropdown dengan searcg, maksimal 1}
+
+handle sanitasi / check pilihan otomatis dr pilihan role. untuk pilihan niche / kategori masukan db {admin bisa crud}
+
+tombol konfirmasi.
+jika valid dan sukses direct ke dashboard
+
+backend : generate foto profile random dari api dicebear dan simpan db
+====
+dashboard element
+
+header dashboard
+
+MENU UTAMA
+ profile
+ social link
+ custom link
+ analytic
+
+Analytic {domain.com/[usrrname]}
+
+Detail akun
+  nama
+  username
+  tipe role
+  dibuat tgl
+bagikan profile {salin url profile}
+
+footer dashboard
+  
+====
+header dashboard
+logo dan nama - menu {layar lebar} foto profile dengan submenu setting dan logout
+
+footer dashboard
+sesuaikan..
+
+setting
+ganti password
+
+form
+password baru
+repass
+{tidak perlu input pass lama}
+tombol ubah password
+
+delete account
+dengan konfirmasi pop up , wajib input teks KONFIRMASI
+
+=====
+profile
+[cc]
+foto profile {upload foto custom}
+Nama lengkap
+Tagline "dalam 1 kalimat"
+Bio
+niche {bisa ganti niche}
+lokasi {nama kota} dropdown dengan dengan search, admin crud {masuk database} tambahkan skrng di db surabaya, gresik, sidoarjo
+tgl lahir {fitur sembunyikan umur di public page}
+tombol simpan
+
+[brand]
+foto profile {upload foto custom}
+Nama lengkap
+Bio
+kategori {bisa ganti kategori}
+lokasi {nama kota} dropdown dengan dengan search, admin crud {masuk database} tambahkan skrng di db surabaya, gresik, sidoarjo
+tombol simpan
+===
+social link
+form add
+pilihan platform {dropdown with logo platform} - input username
+*output link lengkap
+*handle link dibackend {.env}
+platform yg ditampilkan [ig,tt,fb,twitter,yt,discord]
+
+form list social link
+platform logo + link lengkap ---- edit - delete [dengan konfirmasi]
+====
+custom link
+form add
+upload logo opsional - input full link - judul
+deskripsi opsional
+tombol simpan
+
+form list custom link
+platform logo + link lengkap ---- edit - delete [dengan konfirmasi]
+====
+analytic
+full [lengkap] fitur analitik, tampilkan semua data secara real time
+===
+
+intruksi khusus
+theme {kombinasi ungu - kuning - putih}
+pilih mode {light [default] dan dark} dengan icon menyesuaikan mode [bukan dropdown pilihan]
+pisahkan antara backend, frontend, routes sesuai dengan nama fitur.
+
+sanitasi dan validasi semua input
+seo friendly
+handle pesan berhasil, error, pending custom dan tampilkam notifikasi sesuai
+pastikan buat route, tidak ada pemanggilan db langsung dr frontend.
+responsive untuk semua device
+
+====
+dashboard admin dan link public blm saya selesaikan, jd tolong buatkan juga menyesuaikan kerangka utama saya.
+====
+buatkan kerangka agar saya bisa buat web dr 0 hingga tuntas 100% menggunakan ai.
+
+maksud saya restruktur kerangaka saya.
+
+mungkin ada yg terlewat atau apalah, 
+
+saya pakai vscode
+
+keterbatasan ilmu [saya] dan limit [ai]
+
+
+
+intinya buatkan kerangka
+
+dev_proges .md
+intruction.md
+env example
+
+agar ai tahu apa yg kurang, dan note2 yg seharusnya di tekankan, dan khusus ai [baru] wajib baca file apa dll. agar ttp relevan dengan tujuan yg sama
